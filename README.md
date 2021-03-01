@@ -6,7 +6,7 @@
 
 [website](https://www.siobahnschuck.com) |
 [vimeo](https://www.vimeo.com/siobahnschuck)
- | [linkedIn](https://www.linkedin.com/siobahn-schuck) |
+ | [linkedIn](https://www.linkedin.com/in/siobahnschuck/) |
 [gitHub](https://github.com/siobahnschuck)
 
 ***
