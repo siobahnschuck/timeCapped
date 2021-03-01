@@ -58,8 +58,8 @@ Otherwise to view and participate in the time capsule click [this link]() to vis
 ![Page One](./imgs/mockHome.png)
 ![Page Two](./imgs/mockCapsule.png)
 ### Architectural Drawings
-![ERD](./imgs/erd.png)
-![Arch](./imgs/arch.png)
+![ERD](./imgs/erd2.png)
+![Arch](./imgs/arch2.png)
 ### Code Snippets
 
 
