@@ -4,7 +4,7 @@ mongoose
     .connect('mongodb://127.0.0.1:27017/capsuleDatabase', {
         useUnifiedTopology: true, 
         useNewUrlParser: true, 
-        useFinaAndModify: true
+        useFindAndModify: true
     }) 
     .then(() => {
         console.log('Successfully connected to MongoDB')
