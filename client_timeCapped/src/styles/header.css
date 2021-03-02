@@ -1,5 +1,23 @@
 .header {
+    display: flex;
     background-color: #33658A;
     height: 10vh;
     margin: 0;
+}
+
+.navContainer {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.about-nav {
+    background-color: darkcyan;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.capsule-nav {
+    background-color: darkcyan;
+    border-radius: 10px;
+    border: 2px solid black;
 }

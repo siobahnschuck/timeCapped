@@ -2,7 +2,7 @@ const Text = require('../models/textSub')
 
 const createText = async (req, res) => {
     try{ 
-        const text = await Text.create({...req.body, user_id: req.params.user_id})
+        const text = await Text.create(req.body)
         res.send(text)
     } catch (error){
         res.json(error)

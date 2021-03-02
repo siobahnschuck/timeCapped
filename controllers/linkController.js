@@ -2,7 +2,7 @@ const Link = require('../models/linkSub')
 
 const createLink = async (req, res) => {
     try{ 
-        const Link = await Link.create(req.body)
+        const link = await Link.create(req.body)
         res.send(link)
     } catch (error){
         res.json(error)

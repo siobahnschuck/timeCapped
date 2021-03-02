@@ -1,11 +1,12 @@
-const { User } = require('../models/User')
+const User = require('../models/User')
 
 const createUser = async (req, res) => {
     try{
-    console.log(req.body)
-    const user = await new User({...req.body})
-    await user.save()
-    res.send(user)
+    // console.log(req.body)
+    const user = await new User(req.body)
+    console.log(user)
+    user.save()
+    // res.send(user)
     return res.status(201).json({
         user
     })
