@@ -50,10 +50,8 @@ export default class CapsuleForm extends Component {
                     <button value="text" onClick={this.handleClick} >Text</button>
                     <button value="link" onClick={this.handleClick}>Link</button>
                     <button value="image" onClick={this.handleClick}>Image</button>
-                    <MediaForm mediaChosen={this.state.mediaChosen} handleSubmitText={this.props.handleSubmitText} newSub={this.props.newSub} handleSubChange={this.props.handleSubChange}/>
+                    <MediaForm mediaChosen={this.state.mediaChosen} handleSubmitText={this.props.handleSubmitText} handleSubmitLink={this.props.handleSubmitLink} newSub={this.props.newSub} handleSubChange={this.props.handleSubChange}/>
                 </div>
-         
-     
             </div>
         )
     }

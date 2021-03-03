@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 export default class MediaForm extends Component {
     render(){
-        const {mediaChosen, handleSubmitText, newSub, handleSubChange } = this.props
+        const {mediaChosen, handleSubmitText, handleSubmitLink, newSub, handleSubChange } = this.props
             switch(mediaChosen) {
             case "text": 
             return(
@@ -14,7 +14,7 @@ export default class MediaForm extends Component {
                         type="text"
                         value={newSub}
                         onChange={handleSubChange}
-                        name="text-submission"
+                        name="text"
                         placeholder="write your story here"
                         />
                         <input type="submit" value="submit to the capsule!"/>
@@ -23,11 +23,11 @@ export default class MediaForm extends Component {
             case "link": 
             return(
                 <div>
-                    <form className="link-form" onSubmit={handleSubmitText}>
+                    <form className="link-form" onSubmit={handleSubmitLink}>
                         <input
                         className="linkbox"
                         type="text"
-                        name="link-submission"
+                        name="url"
                         value={newSub}
                         onChange={handleSubChange}
                         placeholder="add a link here" 
