@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 export default class MediaForm extends Component {
     render(){
-        const {mediaChosen, handleSubmitText, handleSubmitLink, newSub, handleSubChange } = this.props
+        const {mediaChosen, handleSubmitText, handleSubmitLink, handleSubmitImage, newSub, handleSubChange } = this.props
             switch(mediaChosen) {
             case "text": 
             return(
@@ -11,10 +11,10 @@ export default class MediaForm extends Component {
                     <form className="text-form" onSubmit={handleSubmitText}>
                         <input 
                         className="textbox"
+                        name="text"
                         type="text"
                         value={newSub}
                         onChange={handleSubChange}
-                        name="text"
                         placeholder="write your story here"
                         />
                         <input type="submit" value="submit to the capsule!"/>
@@ -40,15 +40,24 @@ export default class MediaForm extends Component {
             case "image":
             return(
                 <div>
-                <form className="img-form">
+                <form className="img-form" onSubmit={handleSubmitImage}>
+                    <input 
+                        type="text"
+                        name="url"
+                        placeholder="paste an external link here"
+                        value={newSub}
+                        onChange={handleSubChange}
+                        />
+                        <p> or</p>
                     <input 
                         className="img-box"
                         type="file"
-                        name="image-submission"
+                        name="img"
                         value={newSub}
                         onChange={handleSubChange}
                         placeholder="upload your image here"
                     />
+                    <br/>
                     <input type="submit" value="submit to the capsule!"/>
                 </form>
             </div>

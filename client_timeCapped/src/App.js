@@ -12,7 +12,7 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      capsule: [],
+      capsule: null,
       submitted: false,
       date: '',
       locations: '',
@@ -22,14 +22,12 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get(`${BASE_URL}/api/user`, axiosConfig)
+    const res = await axios.get(`${BASE_URL}/content/allc`, axiosConfig)
+    this.setState({
+      capsule: res.data
+    })
     console.log(res)
-  }
-
-  loadCapsule = async () => {
-    //when the page loads brings all
-    //text files, img, and links from the backend into
-    //capsule:[] state array
+    console.log(res.data)
   }
 
   handleDateChange = (e) => {
@@ -72,28 +70,46 @@ export default class App extends Component {
   }
 
   randomReturn = () => {
-    //take the capsule array of everything in the db
-    // and select a random index
-    let min = 0
-    let max = this.state.capsule.length - 1
-    let ranIndex = Math.floor(Math.random() * (max - min)) + min
-    return this.state.capsule[ranIndex]
+    if (this.state.capsule) {
+      Object.keys(this.state.capsule).map((key) => {
+        let value = this.state.capsule[key]
+        switch (key) {
+          case 'img':
+            console.log(value)
+            let imVal = <img src={value} />
+            return imVal
+          case 'url':
+            console.log(value)
+            let urlVal = <a href={value}> {value} </a>
+            return urlVal
+          case 'text':
+            console.log(value)
+            let textVal = <p> {value} </p>
+            return textVal
+          default:
+            return imVal
+        }
+      })
+    } else {
+      console.log('failed')
+    }
   }
 
   handleSubmitText = async (e) => {
     e.preventDefault()
     try {
       let res = await axios.post(`${BASE_URL}/content/text/add`, {
-        newSub: this.state.newSub
+        text: this.state.newSub
       })
       this.setState({
         submitted: true
       })
-      this.state.capsule.push({
-        newSub: this.state.newSub
-      })
-      console.log(res)
+      // this.state.capsule.push({
+      //   newSub: this.state.newSub
+      // })
+      console.log(res.data)
       this.randomReturn()
+      console.log('completed random return')
       return res.data
     } catch (error) {
       console.log(error)
@@ -104,7 +120,7 @@ export default class App extends Component {
     e.preventDefault()
     try {
       let res = await axios.post(`${BASE_URL}/content/link/add`, {
-        newSub: this.state.newSub
+        url: this.state.newSub
       })
       this.setState({
         submitted: true
@@ -112,7 +128,7 @@ export default class App extends Component {
       this.state.capsule.push({
         newSub: this.state.newSub
       })
-      console.log(res)
+      console.log(res.data)
       return res.data
     } catch (error) {
       console.log(error)
@@ -123,7 +139,8 @@ export default class App extends Component {
     e.preventDefault()
     try {
       let res = await axios.post(`${BASE_URL}/content/media/add`, {
-        newSub: this.state.newSub
+        url: this.state.newSub,
+        img: this.state.newSub
       })
       this.setState({
         submitted: true
@@ -131,8 +148,16 @@ export default class App extends Component {
       this.state.capsule.push({
         newSub: this.state.newSub
       })
-      console.log(res)
+      console.log(res.data)
       return res.data
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  handleDelete = async (e) => {
+    try {
+      let res = await axios.delete(`${BASE_URL}`)
     } catch (error) {
       console.log(error)
     }
@@ -154,6 +179,8 @@ export default class App extends Component {
                   locations={this.state.locations}
                   email={this.state.email}
                   newSub={this.state.newSub}
+                  capsule={this.state.capsule}
+                  submitted={this.state.submitted}
                   handleSubmit={this.handleSubmit}
                   handleDate={this.handleDateChange}
                   handleLocation={this.handleLocationChange}
@@ -161,6 +188,8 @@ export default class App extends Component {
                   handleSubChange={this.handleSubChange}
                   handleSubmitText={this.handleSubmitText}
                   handleSubmitLink={this.handleSubmitLink}
+                  handleSubmitImage={this.handleSubmitImage}
+                  randomReturn={this.randomReturn}
                 />
               )}
             />

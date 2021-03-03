@@ -10,15 +10,16 @@ export default class CapsuleForm extends Component {
         }
     }
 
-    //click changes state of mediaChosen to the button value
     handleClick = (e) => {
         console.log('click')
         console.log(e.target.value)
         this.setState({
-            mediaChosen: e.target.value
+            mediaChosen: e.target.value, 
+            clicked: false
         })
     }
     render() {
+        // if (!clicked)
         return (
             <div>
                 <form className="user-form" onSubmit={this.props.handleSubmit}>
@@ -45,12 +46,18 @@ export default class CapsuleForm extends Component {
                         type="submit"
                         value="next" />
                 </form>
+            {/* else show: */}
                 <div>
                     <p>What would you like to contribute?</p>
                     <button value="text" onClick={this.handleClick} >Text</button>
                     <button value="link" onClick={this.handleClick}>Link</button>
                     <button value="image" onClick={this.handleClick}>Image</button>
-                    <MediaForm mediaChosen={this.state.mediaChosen} handleSubmitText={this.props.handleSubmitText} handleSubmitLink={this.props.handleSubmitLink} newSub={this.props.newSub} handleSubChange={this.props.handleSubChange}/>
+                    <MediaForm mediaChosen={this.state.mediaChosen} 
+                    handleSubmitText={this.props.handleSubmitText} 
+                    handleSubmitLink={this.props.handleSubmitLink}
+                    handleSubmitImage={this.props.handleSubmitImage} 
+                    newSub={this.props.newSub} 
+                    handleSubChange={this.props.handleSubChange}/>
                 </div>
             </div>
         )
