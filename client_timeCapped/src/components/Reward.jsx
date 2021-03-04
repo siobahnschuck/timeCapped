@@ -52,7 +52,7 @@ export default class Reward extends Component {
                   switch (key) {
                   case 'img':
                   console.log(value)
-                  return (<div className="imgReward"> <img src={value} alt="poster" />
+                  return (<div className="imgReward"> <div> <img src={value} alt="poster" /> </div>
                     <div className="social">
                     <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                     hashtag="#React #NetArt">
@@ -60,8 +60,8 @@ export default class Reward extends Component {
                     </FacebookShareButton>
                     <TwitterShareButton title="Internet Capsule" via="http://localhost:3000/capsule" hashtags="[#React #NetArt]"><TwitterIcon logoFillColor="white" round={true}></TwitterIcon></TwitterShareButton>
                     <EmailShareButton subject="Look at what I pulled from this Internet Time Capsule!"><EmailIcon logoFillColor="white" round={true}></EmailIcon></EmailShareButton> 
-                    
                     <button className="delete" ><img src="https://img.icons8.com/wired/64/000000/delete-forever.png" alt="trash" onClick={this.props.imgDelete}/></button>
+                    <button type="button" className="submit-btn" onClick={this.props.startOverClick}>Submit Again</button>
                    </div> </div>)
                   case 'url':
                   console.log(value)
@@ -75,6 +75,8 @@ export default class Reward extends Component {
                     <EmailShareButton subject="Look at what I pulled from this Internet Time Capsule!"><EmailIcon logoFillColor="white" round={true}></EmailIcon></EmailShareButton>
                     
                     <button className="delete" ><img src="https://img.icons8.com/wired/64/000000/delete-forever.png" alt="trash" onClick={this.props.linkDelete}/></button>
+                    <button type="button" className="submit-btn" onClick={this.props.startOverClick}>Submit Again</button>
+
                    </div></div>)
                   case 'text':
                   console.log(value) 
@@ -88,6 +90,7 @@ export default class Reward extends Component {
                     <EmailShareButton subject="Look at what I pulled from this Internet Time Capsule!"><EmailIcon logoFillColor="white" round={true}></EmailIcon></EmailShareButton>
                     
                   <button className="delete" ><img src="https://img.icons8.com/wired/64/000000/delete-forever.png" alt="trash" onClick={this.props.textDelete}/></button>
+                  <button type="button" className="submit-btn" onClick={this.props.startOverClick}>Submit Again</button>
                   </div>
                   </div>)
                   default:

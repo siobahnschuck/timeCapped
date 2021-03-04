@@ -50,8 +50,8 @@ export default class CapsuleForm extends Component {
                     < input
                     className="submit-btn"
                         type="submit"
-                        value="next"
-                        onClick={this.handleClick} />
+                        value="submit"/>
+                         <button type="button" className="submit-btn" onClick={this.handleClick}>next</button>
                 </form>
             : <Submission 
             mediaChosen={this.state.mediaChosen} 

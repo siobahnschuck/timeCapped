@@ -56,9 +56,22 @@ const getRandom = async (req, res) => {
   }
 }
 
+const getAll = async (req, res) => {
+  try {
+    let media = await Media.countDocuments()
+    let text = await Text.countDocuments()
+    let link = await Link.countDocuments()
+    let results = [media, text, link]
+    res.send(results)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 module.exports = {
   createMediaSub,
   getMedia,
   deleteMedia,
-  getRandom
+  getRandom,
+  getAll
 }

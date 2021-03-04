@@ -17,7 +17,8 @@ export default class App extends Component {
       locations: '',
       email: '',
       newSub: '',
-      deleted: false
+      deleted: false,
+      stats: ''
     }
   }
 
@@ -26,7 +27,6 @@ export default class App extends Component {
     this.setState({
       capsule: res.data
     })
-    console.log(res)
     console.log(res.data)
   }
 
@@ -141,7 +141,22 @@ export default class App extends Component {
       let res = await axios.delete(
         `${BASE_URL}/content/link/delete/${this.state.capsule._id}`
       )
+      console.log(res)
       this.setState({ deleted: true, newSub: '', submitted: false })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  startOverClick = () => {
+    this.setState({ deleted: true, newSub: '', submitted: false })
+  }
+
+  capsuleStats = async (e) => {
+    try {
+      let res = await axios.get(`${BASE_URL}/content/all/types`)
+      console.log(res.data)
+      this.setState({ stats: res.data })
     } catch (error) {
       console.log(error)
     }
@@ -177,6 +192,8 @@ export default class App extends Component {
                   imgDelete={this.imgDelete}
                   textDelete={this.textDelete}
                   linkDelete={this.linkDelete}
+                  startOverClick={this.startOverClick}
+                  capsuleStats={this.capsuleStats}
                 />
               )}
             />

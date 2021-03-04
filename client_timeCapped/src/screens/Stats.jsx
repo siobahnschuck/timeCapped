@@ -7,8 +7,7 @@ export default class Stats extends Component{
         return(
             <div className="stats">
                     <div className="info">
-                    <button className="stats-btn"> Capsule Stats </button>
-
+                    <button className="stats-btn" onClick={this.props.capsuleStats}> Capsule Stats </button>
                     </div>
             </div>
         )
