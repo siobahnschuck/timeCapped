@@ -4,6 +4,7 @@
   grid-template-rows: 10% 2fr;
   justify-items: center;
   height: auto;
+  background-color: #2f4858;
 }
 .sidebar {
   grid-row: 1/3;
