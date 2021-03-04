@@ -1,5 +1,10 @@
 .main {
-    background-color: #33658A;
-    color: orange;
-    height: 10vh;
+  background-color: #33658a;
+  color: orange;
+  height: 10vh;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }

@@ -1,23 +1,35 @@
 .header {
-    display: flex;
-    background-color: #33658A;
-    height: 10vh;
-    margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #33658a;
+  height: 5vh;
+  margin: 0;
+  padding: 2%;
 }
 
 .navContainer {
-    align-self: flex-end;
-    justify-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  /* align-self: center;
+  justify-self: flex-end; */
 }
 
 .about-nav {
-    background-color: darkcyan;
-    border-radius: 10px;
-    border: 2px solid black;
+  background-color: #86bbd8d3;
+  border-radius: 1px;
+  height: 5vh;
 }
 
 .capsule-nav {
-    background-color: darkcyan;
-    border-radius: 10px;
-    border: 2px solid black;
+  background-color: #86bbd8d3;
+  border-radius: 1px;
+  height: 5vh;
+  width: 20vw;
+}
+
+.stats-nav {
+  background-color: #86bbd8d3;
+  border-radius: 1px;
+  margin-right: 40%;
+  height: 5vh;
 }

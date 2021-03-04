@@ -69,29 +69,6 @@ export default class App extends Component {
     }
   }
 
-  // handleDelete = async (req, res) => {
-  //   if (this.state.capsule) {
-  //     Object.keys(this.state.capsule).map((key) => {
-  //       let value = this.state.capsule[key]
-  //       switch (key) {
-  //         case 'img':
-  //           let res = await axios.delete(`${BASE_URL}/content/media/delete/${req.params.id}`)
-  //           break;
-  //         case 'url':
-  //           let res = await axios.delete(`${BASE_URL}/content/link/delete/${req.params.id}`)
-  //           break;
-  //         case 'text':
-  //           let res= await axios.delete(`${BASE_URL}/content/text/delete/${req.params.id}`)
-  //           break;
-  //         default:
-  //           return null
-  //       }
-  //     })
-  //   } else {
-  //     console.log('failed')
-  //   }
-  // }
-
   handleSubmitText = async (e) => {
     e.preventDefault()
     try {
@@ -101,12 +78,7 @@ export default class App extends Component {
       this.setState({
         submitted: true
       })
-      // this.state.capsule.push({
-      //   newSub: this.state.newSub
-      // })
-      console.log(res.data)
       this.randomReturn()
-      console.log('completed random return')
       return res.data
     } catch (error) {
       console.log(error)
@@ -122,10 +94,6 @@ export default class App extends Component {
       this.setState({
         submitted: true
       })
-      // this.state.capsule.push({
-      //   newSub: this.state.newSub
-      // })
-      console.log(res.data)
       return res.data
     } catch (error) {
       console.log(error)
@@ -142,10 +110,6 @@ export default class App extends Component {
       this.setState({
         submitted: true
       })
-      // this.state.capsule.push({
-      //   newSub: this.state.newSub
-      // })
-      console.log(res.data)
       return res.data
     } catch (error) {
       console.log(error)

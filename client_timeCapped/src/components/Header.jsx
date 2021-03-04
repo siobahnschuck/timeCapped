@@ -6,17 +6,16 @@ export default class Header extends Component {
     render() {
         return(
             <div className="header"> 
-                <div>
+                <div className="logo">
                 <NavLink to="/">
                 <img 
-                    src=".../public/img/tC-logo-50px.png"
-                    className="logo"
+                    src="../styles/img/tC-logo-50px.png"
                     width="50px"
                     alt="logo"
                     />
                 </NavLink>
-                </div>
-                <ul className="navContainer">
+                </div >
+                <div className="navContainer">
                 <NavLink to="/about" 
                 className="about-nav"
                 style={{ textDecoration: 'none', color: 'black' }}> 
@@ -28,11 +27,11 @@ export default class Header extends Component {
                 CAPSULE
                 </NavLink>
                 <NavLink to="/stats"
-                className="capsule-nav"
+                className="stats-nav"
                 style={{ textDecoration: 'none', color: 'black' }}> 
                 STATS
                 </NavLink>
-                </ul>
+                </div>
             </div>
         )
     }

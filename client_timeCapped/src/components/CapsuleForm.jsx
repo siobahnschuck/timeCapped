@@ -57,8 +57,7 @@ export default class CapsuleForm extends Component {
             newSub={this.props.newSub} 
             handleSubChange={this.props.handleSubChange} 
             handleClick={this.handleClick}
-            />}
-                
+            />}    
             </div>
         )
     }
