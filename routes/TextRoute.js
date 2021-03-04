@@ -3,6 +3,6 @@ const controller = require('../controllers/textController')
 
 TextRouter.get('/text/view', controller.getText)
 TextRouter.post('/text/add', controller.createText)
-TextRouter.delete('/text/delete/:text_id', controller.deleteText)
+TextRouter.delete('/text/delete/:textid', controller.deleteText)
 
 module.exports = TextRouter

@@ -3,6 +3,6 @@ const controller = require('../controllers/linkController')
 
 LinkRouter.get('/link/view', controller.getLink)
 LinkRouter.post('/link/add', controller.createLink)
-LinkRouter.delete('/link/delete', controller.deleteLink)
+LinkRouter.delete('/link/delete/:linkid', controller.deleteLink)
 
 module.exports = LinkRouter
