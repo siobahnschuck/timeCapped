@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import '../styles/capsule.css'
-import MediaForm from './MediaForm'
+import Submission from './Submission'
+
 
 export default class CapsuleForm extends Component {
     constructor() {
         super()
         this.state = {
-            mediaChosen: ""
+            mediaChosen: "", 
+            clicked: false,
         }
     }
 
@@ -15,13 +17,13 @@ export default class CapsuleForm extends Component {
         console.log(e.target.value)
         this.setState({
             mediaChosen: e.target.value, 
-            clicked: false
+            clicked: true
         })
     }
     render() {
-        // if (!clicked)
         return (
             <div>
+            {(!this.state.clicked) ?
                 <form className="user-form" onSubmit={this.props.handleSubmit}>
                     <input
                         type="text"
@@ -44,21 +46,19 @@ export default class CapsuleForm extends Component {
                         onChange={this.props.handleEmail} />
                     < input
                         type="submit"
-                        value="next" />
+                        value="next"
+                        onClick={this.handleClick} />
                 </form>
-            {/* else show: */}
-                <div>
-                    <p>What would you like to contribute?</p>
-                    <button value="text" onClick={this.handleClick} >Text</button>
-                    <button value="link" onClick={this.handleClick}>Link</button>
-                    <button value="image" onClick={this.handleClick}>Image</button>
-                    <MediaForm mediaChosen={this.state.mediaChosen} 
-                    handleSubmitText={this.props.handleSubmitText} 
-                    handleSubmitLink={this.props.handleSubmitLink}
-                    handleSubmitImage={this.props.handleSubmitImage} 
-                    newSub={this.props.newSub} 
-                    handleSubChange={this.props.handleSubChange}/>
-                </div>
+            : <Submission 
+            mediaChosen={this.state.mediaChosen} 
+            handleSubmitText={this.props.handleSubmitText} 
+            handleSubmitLink={this.props.handleSubmitLink}
+            handleSubmitImage={this.props.handleSubmitImage} 
+            newSub={this.props.newSub} 
+            handleSubChange={this.props.handleSubChange} 
+            handleClick={this.handleClick}
+            />}
+                
             </div>
         )
     }

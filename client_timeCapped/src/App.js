@@ -69,31 +69,28 @@ export default class App extends Component {
     }
   }
 
-  randomReturn = () => {
-    if (this.state.capsule) {
-      Object.keys(this.state.capsule).map((key) => {
-        let value = this.state.capsule[key]
-        switch (key) {
-          case 'img':
-            console.log(value)
-            let imVal = <img src={value} />
-            return imVal
-          case 'url':
-            console.log(value)
-            let urlVal = <a href={value}> {value} </a>
-            return urlVal
-          case 'text':
-            console.log(value)
-            let textVal = <p> {value} </p>
-            return textVal
-          default:
-            return imVal
-        }
-      })
-    } else {
-      console.log('failed')
-    }
-  }
+  // handleDelete = async (req, res) => {
+  //   if (this.state.capsule) {
+  //     Object.keys(this.state.capsule).map((key) => {
+  //       let value = this.state.capsule[key]
+  //       switch (key) {
+  //         case 'img':
+  //           let res = await axios.delete(`${BASE_URL}/content/media/delete/${req.params.id}`)
+  //           break;
+  //         case 'url':
+  //           let res = await axios.delete(`${BASE_URL}/content/link/delete/${req.params.id}`)
+  //           break;
+  //         case 'text':
+  //           let res= await axios.delete(`${BASE_URL}/content/text/delete/${req.params.id}`)
+  //           break;
+  //         default:
+  //           return null
+  //       }
+  //     })
+  //   } else {
+  //     console.log('failed')
+  //   }
+  // }
 
   handleSubmitText = async (e) => {
     e.preventDefault()
@@ -125,9 +122,9 @@ export default class App extends Component {
       this.setState({
         submitted: true
       })
-      this.state.capsule.push({
-        newSub: this.state.newSub
-      })
+      // this.state.capsule.push({
+      //   newSub: this.state.newSub
+      // })
       console.log(res.data)
       return res.data
     } catch (error) {
@@ -145,19 +142,11 @@ export default class App extends Component {
       this.setState({
         submitted: true
       })
-      this.state.capsule.push({
-        newSub: this.state.newSub
-      })
+      // this.state.capsule.push({
+      //   newSub: this.state.newSub
+      // })
       console.log(res.data)
       return res.data
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  handleDelete = async (e) => {
-    try {
-      let res = await axios.delete(`${BASE_URL}`)
     } catch (error) {
       console.log(error)
     }
@@ -189,7 +178,7 @@ export default class App extends Component {
                   handleSubmitText={this.handleSubmitText}
                   handleSubmitLink={this.handleSubmitLink}
                   handleSubmitImage={this.handleSubmitImage}
-                  randomReturn={this.randomReturn}
+                  handleDelete={this.handleDelete}
                 />
               )}
             />
