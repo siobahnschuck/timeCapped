@@ -4,16 +4,37 @@ import { BASE_URL} from '../globals'
 
 
 export default class Reward extends Component {
+  constructor(){
+    super()
+    this.state = {
+      deleted: false
+    }
+  }
     imgDelete = async (e) => {
-      let res = await axios.delete(`${BASE_URL}/content/media/delete/${this.props.capsule._id}`)
+      try{
+        let res = await axios.delete(`${BASE_URL}/content/media/delete/${this.props.capsule._id}`)
+        this.setState({deleted: true})
+      }catch(error){
+        console.log(error)
+      }
     }
 
     textDelete = async (e) => {
-      let res = await axios.delete(`${BASE_URL}/content/text/delete/${this.props.capsule._id}`)
+      try{
+        let res = await axios.delete(`${BASE_URL}/content/text/delete/${this.props.capsule._id}`)
+        this.setState({deleted: true})
+      }catch(error){
+        console.log(error)
+      }
     }
 
     linkDelete = async (e) => {
-      let res = await axios.delete(`${BASE_URL}/content/link/delete/${this.props.capsule._id}`)
+      try{
+        let res = await axios.delete(`${BASE_URL}/content/link/delete/${this.props.capsule._id}`)
+        this.setState({deleted: true})
+      }catch(error){
+        console.log(error)
+      }
     }
 
 
@@ -23,13 +44,15 @@ export default class Reward extends Component {
         return(
           <div className="return">
           <h1>Output here:</h1>
-       <div>   
+       <div> 
+         {!this.state.deleted ?
+         <div className="outer">
           {(capsule) ? Object.keys(capsule).map((key) => {
           let value = capsule[key]
           switch (key) {
               case 'img':
               console.log(value)
-              return (<div> <img src={value} />
+              return (<div> <img src={value} alt="poster" />
               <button onClick={this.imgDelete}>Delete</button> </div>)
               case 'url':
               console.log(value)
@@ -44,6 +67,7 @@ export default class Reward extends Component {
               return null
           }
       }) : null }
+        </div> : null }
               </div>
           </div>
         )

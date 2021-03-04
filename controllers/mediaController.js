@@ -56,25 +56,9 @@ const getRandom = async (req, res) => {
   }
 }
 
-// const deleteRandom = async (req, res) => {
-//   try {
-//     //delete by id
-//     // await findById
-//     let media = Media.deleteOne({ _id: req.params._id })
-//     res.send({
-//       msg: 'the random file was deleted',
-//       playload: req.params._id,
-//       status: 'Ok'
-//     })
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
 module.exports = {
   createMediaSub,
   getMedia,
   deleteMedia,
-  getRandom,
-  deleteRandom
+  getRandom
 }
