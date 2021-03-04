@@ -3,7 +3,7 @@
 .home-body {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 20% 40% 80%;
+  grid-template-rows: 20% 40% -50;
   background-color: #2f4858;
   height: 120vh;
   width: 100vw;
@@ -51,7 +51,7 @@
   font-size: 50px;
   background-color: #86bbd8d3;
   border-radius: 100%;
-  align-self: end;
+  align-self: top;
   justify-self: start;
   -webkit-text-stroke: 1px #86bbd8d3;
 }
