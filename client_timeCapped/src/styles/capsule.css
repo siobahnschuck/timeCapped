@@ -15,11 +15,6 @@
   grid-row: 2/3;
   grid-column: 2/3;
 }
-.stats {
-  height: 20vh;
-  background-color: white;
-  color: orange;
-}
 .user-form {
   display: flex;
   flex-direction: column;
@@ -51,4 +46,11 @@
   background-color: #86bbd8d3;
   border-radius: 20px;
   height: auto;
+}
+
+.stats-btn {
+  background-color: orange;
+  height: 5vh;
+  width: 10vw;
+  border-radius: 20px;
 }

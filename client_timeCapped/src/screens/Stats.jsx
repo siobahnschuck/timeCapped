@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import '../styles/home.css'
+import '../styles/capsule.css'
 
 
 export default class Stats extends Component{
@@ -9,7 +7,8 @@ export default class Stats extends Component{
         return(
             <div className="stats">
                     <div className="info">
-                    <p>There are currently this many items in the capsule:</p>
+                    <button className="stats-btn"> Capsule Stats </button>
+
                     </div>
             </div>
         )
