@@ -26,11 +26,6 @@ export default class Header extends Component {
                 style={{ textDecoration: 'none', color: 'black' }}> 
                 CAPSULE
                 </NavLink>
-                <NavLink to="/stats"
-                className="stats-nav"
-                style={{ textDecoration: 'none', color: 'black' }}> 
-                STATS
-                </NavLink>
                 </div>
             </div>
         )

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Reward from '../components/Reward'
+import Stats from './Stats'
 import CapsuleForm from '../components/CapsuleForm'
 
 import '../styles/capsule.css'
@@ -12,7 +13,7 @@ export default class Capsule extends Component {
 
     render() {
        
-        const { handleSubmitText, handleSubmitLink, handleSubmitImage, handleSubChange, handleDate, newSub, handleLocation, handleEmail, date, locations, email, capsule, submitted, handleDelete} = this.props
+        const { handleSubmitText, handleSubmit, handleSubmitLink, handleSubmitImage, handleSubChange, handleDate, newSub, handleLocation, handleEmail, date, locations, email, capsule, submitted, imgDelete, textDelete, linkDelete, deleted} = this.props
         console.log(capsule)
         return(
             <div> 
@@ -20,14 +21,16 @@ export default class Capsule extends Component {
                 <main className="body">
                 <div className="sidebar">
                 <h1>Welcome to the Capsule</h1>
-                <p>You will be prompted to enter some information about either your 
+                <p className="instructions">You will be prompted to enter some information about either your 
                     <br/> submission into the capsule or you yourself, please fill out the following
                     <br/> questions carefully! When you are completed with your submission 
                     <br/> you will recieve a random part of the capsule as a reward! You then have the opiton to delete it permanently.
                 </p>
-                </div >
+                <Stats/>
+                </div>
                 <div className="forms"> 
                 <CapsuleForm 
+                handleSubmit={handleSubmit}
                 handleSubmitText={handleSubmitText} 
                 handleSubmitLink={handleSubmitLink} 
                 handleSubmitImage={handleSubmitImage} 
@@ -37,7 +40,7 @@ export default class Capsule extends Component {
                 handleDate={handleDate} 
                 handleEmail={handleEmail} 
                 date={date} locations={locations} email={email}  />
-                {submitted ? <Reward capsule={capsule} handleDelete={handleDelete}/> : null } 
+                {submitted ? <Reward capsule={capsule} imgDelete={imgDelete} textDelete={textDelete} linkDelete={linkDelete} deleted={deleted} /> : null } 
                 </div>
                 </main>
                 <Footer/>

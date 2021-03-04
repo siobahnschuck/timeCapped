@@ -24,8 +24,9 @@ export default class CapsuleForm extends Component {
         return (
             <div>
             {(!this.state.clicked) ?
-                <form className="user-form" onSubmit={this.props.handleSubmit}>
+                <form  className="container-form"onSubmit={this.props.handleSubmit}>
                     <input
+                        className="user-form"
                         type="text"
                         name="date"
                         placeholder="date"
@@ -33,18 +34,21 @@ export default class CapsuleForm extends Component {
                         onChange={this.props.handleDate} />
 
                     <input
+                        className="user-form"
                         type="text"
                         name="location"
                         value={this.props.locations}
                         placeholder="where are you?"
                         onChange={this.props.handleLocation} />
                     <input
+                        className="user-form"
                         type="text"
                         name="email"
                         placeholder="email"
                         value={this.props.email}
                         onChange={this.props.handleEmail} />
                     < input
+                    className="submit-btn"
                         type="submit"
                         value="next"
                         onClick={this.handleClick} />
@@ -57,7 +61,7 @@ export default class CapsuleForm extends Component {
             newSub={this.props.newSub} 
             handleSubChange={this.props.handleSubChange} 
             handleClick={this.handleClick}
-            />}    
+            /> }    
             </div>
         )
     }

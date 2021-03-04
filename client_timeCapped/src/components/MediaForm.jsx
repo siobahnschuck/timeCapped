@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/mediaForm.css'
 
 
 export default class MediaForm extends Component {
@@ -7,7 +8,7 @@ export default class MediaForm extends Component {
             switch(mediaChosen) {
             case "text": 
             return(
-                <div>
+                <div className="container" >
                     <form className="text-form" onSubmit={handleSubmitText}>
                         <input 
                         className="textbox"
@@ -17,7 +18,7 @@ export default class MediaForm extends Component {
                         onChange={handleSubChange}
                         placeholder="write your story here"
                         />
-                        <input type="submit" value="submit to the capsule!"/>
+                        <input className="submitCap" type="submit" value="submit to the capsule!"/>
                     </form>
                 </div>)
             case "link": 
@@ -32,7 +33,7 @@ export default class MediaForm extends Component {
                         onChange={handleSubChange}
                         placeholder="add a link here" 
                         />
-                        <input type="submit" value="submit to the capsule!"/>
+                        <input className="submitCap" type="submit" value="submit to the capsule!"/>
                     </form>
 
                 </div>
@@ -42,23 +43,15 @@ export default class MediaForm extends Component {
                 <div>
                 <form className="img-form" onSubmit={handleSubmitImage}>
                     <input 
+                        className="imgbox"
                         type="text"
                         name="url"
-                        placeholder="paste an external link here"
+                        placeholder="paste an image location link here"
                         value={newSub}
                         onChange={handleSubChange}
                         />
-                        <p> or</p>
-                    <input 
-                        className="img-box"
-                        type="file"
-                        name="img"
-                        value={newSub}
-                        onChange={handleSubChange}
-                        placeholder="upload your image here"
-                    />
                     <br/>
-                    <input type="submit" value="submit to the capsule!"/>
+                    <input className="submitCap" type="submit" value="submit to the capsule!"/>
                 </form>
             </div>
             )

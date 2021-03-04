@@ -1,15 +1,16 @@
 import React, {Component} from 'react'
 import MediaForm from './MediaForm'
+import '../styles/mediaForm.css'
 
 
 export default class Submission extends Component {
   render(){
     return(
-      <div>
+      <div className="container-sub-form">
         <p>What would you like to contribute?</p>
-        <button value="text" onClick={this.props.handleClick} >Text</button>
-        <button value="link" onClick={this.props.handleClick}>Link</button>
-        <button value="image" onClick={this.props.handleClick}>Image</button>
+        <button className="type-btn" value="text" onClick={this.props.handleClick} >Text</button>
+        <button className="type-btn" value="link" onClick={this.props.handleClick}>Link</button>
+        <button className="type-btn" value="image" onClick={this.props.handleClick}>Image</button>
         <div>
         <MediaForm mediaChosen={this.props.mediaChosen} 
         handleSubmitText={this.props.handleSubmitText} 
