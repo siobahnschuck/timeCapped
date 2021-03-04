@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import graphic from '../styles/img/homePageGraphic.png'
+import {NavLink} from 'react-router-dom'
 import '../styles/home.css'
+export {graphic}
 
 
 export default class Home extends Component{
@@ -9,12 +12,19 @@ export default class Home extends Component{
         return(
             <div>
                 <Header/>
-                <main className="body">
-                    <div className="info">
-                    <p className="info-text">Time Capped sends you on an instant 
+                <main className="home-body">
+                    <section>
+                    <p className="info-text"><h1 className="app-intro">TimeCapped</h1> 
+                    Time Capped sends you on an instant 
                     internet voyage. <br/> <br/> As an active time capsule any visitor to the capsule is welcomed to trade a piece of media for something out of the capsule. You might uncover 
                     something rare, a personal anecdote from another visitor, or a relic of meme history. <br/> <br/>There is only one way to find out!</p>
-                    </div>
+                    </section>
+                    <section>
+                       <NavLink to="/capsule">Enter the capsule</NavLink>
+                    </section>
+                    <footer className="graphic" >
+                    <img className="bliss" src={graphic} alt="home-Page-Graphic" border="0"/>
+                    </footer>
                 </main>
                 <Footer/>
             </div>

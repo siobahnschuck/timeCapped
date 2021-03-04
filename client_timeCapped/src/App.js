@@ -18,7 +18,7 @@ export default class App extends Component {
       email: '',
       newSub: '',
       deleted: false,
-      stats: ''
+      stats: []
     }
   }
 
@@ -120,6 +120,7 @@ export default class App extends Component {
         `${BASE_URL}/content/media/delete/${this.state.capsule._id}`
       )
       this.setState({ deleted: true, newSub: '', submitted: false })
+      console.log(res)
     } catch (error) {
       console.log(error)
     }
@@ -130,6 +131,7 @@ export default class App extends Component {
       let res = await axios.delete(
         `${BASE_URL}/content/text/delete/${this.state.capsule._id}`
       )
+      console.log(res)
       this.setState({ deleted: true, newSub: '', submitted: false })
     } catch (error) {
       console.log(error)
@@ -181,6 +183,7 @@ export default class App extends Component {
                   capsule={this.state.capsule}
                   submitted={this.state.submitted}
                   deleted={this.state.deleted}
+                  stats={this.state.stats}
                   handleSubmit={this.handleSubmit}
                   handleDate={this.handleDateChange}
                   handleLocation={this.handleLocationChange}

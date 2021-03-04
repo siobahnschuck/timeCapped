@@ -1,0 +1,45 @@
+.about-body {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10% 30%;
+  background-color: #86bbd8d3;
+  margin: 0;
+  height: 100%;
+  min-width: 60px;
+  color: #2f4858;
+}
+
+.about-title {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 30% 30%;
+}
+
+.about-content {
+  width: 50%;
+  align-self: top;
+  justify-self: center;
+  text-align: left;
+}
+
+.self {
+  height: 30%;
+  border-radius: 100em;
+  border: 5px solid grey;
+}
+
+.linkedIn {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  height: 10vh;
+  align-self: center;
+}
+
+.email {
+  grid-row: 2/2;
+}

@@ -1,20 +1,39 @@
-.body {
-    background-color: #2f4858;
-    height: 100vh;
-    color: white;
-    margin: 0;
+.home-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20% 40% auto;
+  background-color: #2f4858;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  margin: 0;
 }
 
 .info {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 20% 1fr 1fr;
+  height: auto;
+}
+
+.app-intro {
+  font-size: 50px;
+  text-align: left;
+  align-self: start;
 }
 
 .info-text {
-    grid-column: 1 /2;
-    grid-row: 2/3;
-    text-align: left;
-    margin: 20px;
-    width: 50vw;
+  grid-column: 2 /3;
+  grid-row: 2/3;
+  text-align: left;
+  margin: 20px;
+  width: 50vw;
+}
+
+.graphic {
+  grid-row: 3/4;
+  grid-column: 1 / span 3;
+  align-self: end;
+  background-color: #2f4858;
+}
+
+.bliss {
+  width: 100%;
 }

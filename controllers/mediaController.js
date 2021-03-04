@@ -1,6 +1,7 @@
 const Media = require('../models/mediaSub')
 const Link = require('../models/linkSub')
 const Text = require('../models/textSub')
+const User = require('../models/User')
 
 const createMediaSub = async (req, res) => {
   try {
@@ -58,10 +59,11 @@ const getRandom = async (req, res) => {
 
 const getAll = async (req, res) => {
   try {
-    let media = await Media.countDocuments()
-    let text = await Text.countDocuments()
-    let link = await Link.countDocuments()
-    let results = [media, text, link]
+    let media = await Media.count()
+    let text = await Text.count()
+    let link = await Link.count()
+    let user = await User.count()
+    let results = [media, text, link, user]
     res.send(results)
   } catch (error) {
     console.log(error)

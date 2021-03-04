@@ -65,7 +65,7 @@ export default class Reward extends Component {
                    </div> </div>)
                   case 'url':
                   console.log(value)
-                  return (<div className="linkReward"> <div><a href={value}> {value} </a></div>
+                  return (<div className="linkReward"> <div><a href={value} target="_blank"> {value} </a></div>
                   <div className="social">
                    <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                     hashtag="#React #NetArt">

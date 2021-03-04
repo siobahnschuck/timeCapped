@@ -13,8 +13,8 @@ export default class Capsule extends Component {
 
     render() {
        
-        const { handleSubmitText, handleSubmit, handleSubmitLink, handleSubmitImage, handleSubChange, handleDate, newSub, handleLocation, handleEmail, date, locations, email, capsule, submitted, imgDelete, textDelete, linkDelete, deleted, startOverClick} = this.props
-        console.log(capsule)
+        const { handleSubmitText, handleSubmit, handleSubmitLink, handleSubmitImage, handleSubChange, handleDate, newSub, handleLocation, handleEmail, date, locations, email, capsule, submitted, imgDelete, textDelete, linkDelete, deleted, startOverClick, stats} = this.props
+        
         return(
             <div> 
                 <Header />
@@ -26,7 +26,7 @@ export default class Capsule extends Component {
                     <br/> questions carefully! When you are completed with your submission 
                     <br/> you will recieve a random part of the capsule as a reward! You then have the opiton to delete it permanently.
                 </p>
-                <Stats capsuleStats={this.props.capsuleStats}/>
+                <Stats capsuleStats={this.props.capsuleStats} stats={stats}/>
                 </div>
                 <div className="forms"> 
                 <CapsuleForm 

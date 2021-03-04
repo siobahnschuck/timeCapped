@@ -9,7 +9,7 @@ export default class Header extends Component {
                 <div className="logo">
                 <NavLink to="/">
                 <img 
-                    src="../styles/img/tC-logo-50px.png"
+                    src="https://i.ibb.co/zPJCxJY/t-C-logo-50px.png" 
                     width="50px"
                     alt="logo"
                     />
