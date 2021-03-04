@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import graphic from '../styles/img/homePageGraphic.png'
+
 import '../styles/about.css'
+export {graphic}
 
 
 export default class About extends Component{
@@ -30,7 +33,9 @@ export default class About extends Component{
                         <a href="https://www.linkedin.com/in/siobahnschuck/" target="_blank"><img className="linkedIn" src="https://i.ibb.co/m8BwLfS/linkedin-Icon.png"/> </a>
                         <h3 className="email">siobahnschuck@gmail.com </h3>
                     </div>
-                  
+                    <div className="graphic-abt" >
+                  <img className="bliss-abt" src={graphic} alt="home-Page-Graphic" border="0"/>
+                  </div>
                 </main>
                 <Footer/>
             </div>

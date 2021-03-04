@@ -7,7 +7,7 @@ export default class Submission extends Component {
   render(){
     return(
       <div className="container-sub-form">
-        <p>What would you like to contribute?</p>
+        <p className="contrib">What would you like to contribute?</p>
         <button className="type-btn" value="text" onClick={this.props.handleClick} >Text</button>
         <button className="type-btn" value="link" onClick={this.props.handleClick}>Link</button>
         <button className="type-btn" value="image" onClick={this.props.handleClick}>Image</button>

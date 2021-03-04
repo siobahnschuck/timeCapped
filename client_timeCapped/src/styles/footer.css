@@ -1,10 +1,12 @@
-.main {
-  background-color: #33658a;
+.footer {
+  position: relative;
+  background-color: #619ac5;
   color: orange;
-  height: 10vh;
+  height: 20vh;
   margin: 0;
 }
 
-p {
+.createdBy {
+  color: orange;
   margin: 0;
 }
