@@ -5,6 +5,7 @@ a {
 
 button {
   outline: none;
+  font-family: 'Bebas Neue', cursive;
 }
 
 button:hover,
@@ -12,6 +13,11 @@ input:hover {
   background-color: rgb(240, 204, 138);
 }
 
+input:after {
+  background-color: rgb(240, 204, 138);
+}
+
 input {
   outline: none;
+  font-family: 'Bebas Neue', cursive;
 }
