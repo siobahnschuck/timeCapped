@@ -11,6 +11,7 @@ button {
   outline: none;
   font-family: 'Bebas Neue', cursive;
   padding: 5px;
+  -webkit-box-shadow: 1px 5px #000000;
 }
 
 button:hover {
@@ -30,4 +31,15 @@ input {
   outline: none;
   font-family: 'Bebas Neue', cursive;
   padding: 5px;
+  -webkit-box-shadow: 1px 5px #000000;
+}
+
+.social-btn {
+  -webkit-box-shadow: none;
+}
+
+.social-btn:hover {
+  -webkit-box-shadow: inset 4px 4px 50px 16px rgba(0, 0, 0, 0.79);
+  box-shadow: inset 4px 4px 50px 16px rgba(0, 0, 0, 0.79);
+  border-radius: 50px;
 }

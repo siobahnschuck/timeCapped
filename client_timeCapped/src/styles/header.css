@@ -17,13 +17,14 @@
 .capsule-nav,
 .home-nav {
   align-self: center;
-  background-color: #86bbd8d3;
+  background: linear-gradient(to right, #86bbd8 58%, #ffa500 49%);
   color: black;
   border-radius: 1px;
   padding: 10px;
   margin: 10px;
   height: 100%;
-  border-right: 40px outset orange;
+  width: 5vw;
+  font-size: x-large;
   border-radius: 40px;
   -webkit-box-shadow: 1px 5px 8px 1px #000000;
   box-shadow: 1px 5px 8px 1px #000000;
