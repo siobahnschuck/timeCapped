@@ -4,7 +4,7 @@ import Home from './screens/Home'
 import Capsule from './screens/Capsule'
 import About from './screens/About'
 import axios from 'axios'
-import { BASE_URL, axiosConfig } from './globals'
+import { BASE_URL } from './globals'
 import './App.css'
 
 export default class App extends Component {
