@@ -27,9 +27,9 @@ app.use('/content', LinkRouter)
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')))
+  app.use(express.static(path.join(__dirname, 'client_timeCapped/build')))
   app.get('*', (req, res) => {
-    res.sendFile(path.join(`${__dirname}/client/build/index.html`))
+    res.sendFile(path.join(`${__dirname}/client_timeCapped/build/index.html`))
   })
 }
 
