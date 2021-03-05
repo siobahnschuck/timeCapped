@@ -7,30 +7,30 @@ export default class Header extends Component {
         return(
             <div className="header"> 
                 <div className="logo">
-                <NavLink to="/">
-                <img 
+                    <NavLink to="/">
+                    <img 
                     src="https://i.ibb.co/zPJCxJY/t-C-logo-50px.png" 
                     width="50px"
                     alt="logo"
                     />
-                </NavLink>
+                    </NavLink>
                 </div >
                 <div className="navContainer">
-                <NavLink to="/"
-                className="home-nav"
-                style={{ textDecoration: 'none', color: 'black' }}>
-                HOME
-                </NavLink>
-                <NavLink to="/about" 
-                className="about-nav"
-                style={{ textDecoration: 'none', color: 'black' }}> 
-                ABOUT
-                </NavLink>
-                <NavLink to="/capsule" 
-                className="capsule-nav"
-                style={{ textDecoration: 'none', color: 'black' }}> 
-                CAPSULE
-                </NavLink>
+                    <NavLink to="/"
+                    className="home-nav"
+                    style={{ textDecoration: 'none', color: 'black' }}>
+                    HOME
+                    </NavLink>
+                    <NavLink to="/about" 
+                    className="about-nav"
+                    style={{ textDecoration: 'none', color: 'black' }}> 
+                    ABOUT
+                    </NavLink>
+                    <NavLink to="/capsule" 
+                    className="capsule-nav"
+                    style={{ textDecoration: 'none', color: 'black' }}> 
+                    CAPSULE
+                    </NavLink>
                 </div>
             </div>
         )
