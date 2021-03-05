@@ -17,7 +17,7 @@ export default class Reward extends Component {
                     switch (key) {
                       case 'img':
                         console.log(value)
-                        return (<div className="imgReward"> <div> <img src={value} alt="poster" /> </div>
+                        return (<div className="imgReward"> <div> <img src={value} alt="poster" style={{height: 50, width: 50}} /> </div>
                           <div className="social">
                             <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                             hashtag="#React #NetArt">

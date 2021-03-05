@@ -120,6 +120,7 @@ export default class App extends Component {
         `${BASE_URL}/content/media/delete/${this.state.capsule._id}`
       )
       this.setState({ deleted: true, newSub: '', submitted: false })
+      this.componentDidMount()
       console.log(res)
     } catch (error) {
       console.log(error)
@@ -151,7 +152,8 @@ export default class App extends Component {
   }
 
   startOverClick = () => {
-    this.setState({ deleted: true, newSub: '', submitted: false })
+    this.setState({ deleted: false, newSub: '', submitted: false })
+    this.componentDidMount()
   }
 
   capsuleStats = async (e) => {
