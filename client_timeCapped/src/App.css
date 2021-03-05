@@ -2,3 +2,16 @@ a {
   text-decoration: none;
   color: orange;
 }
+
+button {
+  outline: none;
+}
+
+button:hover,
+input:hover {
+  background-color: rgb(240, 204, 138);
+}
+
+input {
+  outline: none;
+}
