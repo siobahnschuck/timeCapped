@@ -24,7 +24,6 @@ input:hover {
 
 input:focus {
   background-color: rgb(240, 204, 138);
-  width: 80%;
 }
 
 input {

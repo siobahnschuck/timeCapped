@@ -17,7 +17,7 @@ export default class Reward extends Component {
                     switch (key) {
                       case 'img':
                         console.log(value)
-                        return (<div className="imgReward"> <div> <img src={value} alt="poster" style={{height: 50, width: 50}} /> </div>
+                        return (<div className="imgReward"> <div> <img src={value} alt="poster" style={{height: 350, width: 350}} /> </div>
                           <div className="social">
                             <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                             hashtag="#React #NetArt">
@@ -32,7 +32,7 @@ export default class Reward extends Component {
                       case 'url':
                         console.log(value)
                         return (
-                        <div className="linkReward"> <div><a href={value} target="_blank" rel="noreferrer" style={{}}> {value} </a></div>
+                        <div className="linkReward"> <div><a href={value} target="_blank" rel="noreferrer" style={{fontSize: 50}}> {value} </a></div>
                           <div className="social">
                           <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                           hashtag="#React #NetArt">
@@ -47,7 +47,7 @@ export default class Reward extends Component {
                       case 'text':
                         console.log(value) 
                         return (
-                        <div className="text-reward"><p> {value} </p>
+                        <div className="text-reward"><p style={{fontSize: 20}}> {value} </p>
                           <div className="social">
                           <FacebookShareButton url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
                           hashtag="#React #NetArt">
