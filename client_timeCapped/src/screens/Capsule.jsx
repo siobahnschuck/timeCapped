@@ -12,9 +12,7 @@ export default class Capsule extends Component {
     
 
     render() {
-       
         const { handleSubmitText, handleSubmit, handleSubmitLink, handleSubmitImage, handleSubChange, handleDate, newSub, handleLocation, handleEmail, date, locations, email, capsule, submitted, imgDelete, textDelete, linkDelete, deleted, startOverClick, stats} = this.props
-        
         return(
             <div> 
                 <Header />
