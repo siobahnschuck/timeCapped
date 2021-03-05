@@ -21,11 +21,15 @@ export default class Capsule extends Component {
                 <main className="body">
                 <div className="sidebar">
                 <h1>Welcome to the Capsule</h1>
-                <p className="instructions">You will be prompted to enter some information about either your 
-                    <br/> submission into the capsule or you yourself, please fill out the following
+                <p className="instructions">You will be prompted to enter some information about your
+                    <br/> submission into the capsule- please fill out the following
                     <br/> questions carefully! When you are completed with your submission 
-                    <br/> you will recieve a random part of the capsule as a reward! You then have the opiton to delete it permanently.
+                    <br/> you will recieve a random part of the capsule as a reward! You then have the opiton to delete it <strong>permanently</strong> or enter something else into the capsule.
+                    Happy Archiving!
                 </p>
+                <p className="instructions">The capsule was launched on March 5th, 2021. 
+                <br/>If you are interested in what is inside, 
+                <br/>click the button below to reveal the data! </p>
                 <Stats capsuleStats={this.props.capsuleStats} stats={stats}/>
                 </div>
                 <div className="forms"> 

@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import graphic from '../styles/img/homePageGraphic.png'
 import {NavLink} from 'react-router-dom'
 import '../styles/home.css'
-// import './assets/css/font.css'
 export {graphic}
 
 
