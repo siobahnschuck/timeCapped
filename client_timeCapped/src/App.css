@@ -3,9 +3,18 @@ a {
   color: orange;
 }
 
+a:hover {
+  color: rgb(236, 215, 176);
+}
+
 button {
   outline: none;
   font-family: 'Bebas Neue', cursive;
+  padding: 5px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 button:hover,
@@ -13,11 +22,13 @@ input:hover {
   background-color: rgb(240, 204, 138);
 }
 
-input:after {
+input:focus {
   background-color: rgb(240, 204, 138);
+  width: 80%;
 }
 
 input {
   outline: none;
   font-family: 'Bebas Neue', cursive;
+  padding: 5px;
 }

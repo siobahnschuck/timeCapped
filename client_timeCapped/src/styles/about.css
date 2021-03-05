@@ -1,11 +1,11 @@
 .about-body {
   display: grid;
   grid-template-columns: 60% 40%;
-  grid-template-rows: 10% 40% 20%;
+  grid-template-rows: 10% 40% 50%;
   background-color: #86bbd8d3;
   margin: 0;
-  height: 100vh;
-  min-width: 60px;
+  height: 120vh;
+  min-width: 100vw;
   color: #2f4858;
 }
 
@@ -25,12 +25,15 @@
   align-self: top;
   justify-self: center;
   text-align: left;
+  font-size: x-large;
+  z-index: 1;
 }
 
 .self {
-  height: 30%;
+  height: 40%;
   border-radius: 100em;
   border: 5px solid grey;
+  padding: 20px;
 }
 
 .linkedIn {
@@ -38,15 +41,22 @@
   grid-row: 2/3;
   height: 10vh;
   align-self: center;
+  padding: 50px;
 }
 
-.email {
+.email-abt {
   grid-row: 2/2;
+  font-size: x-large;
+  padding-top: 60px;
 }
 .graphic-abt {
   height: 50%;
 }
 .bliss.abt {
+  position: fixed;
+  bottom: 0;
+  grid-column: 1 / span 3;
   width: 100%;
   height: 50%;
+  z-index: -1;
 }

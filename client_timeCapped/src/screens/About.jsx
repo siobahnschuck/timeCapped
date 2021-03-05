@@ -31,7 +31,7 @@ export default class About extends Component{
                         <img className="self"src="https://i.ibb.co/crBcF88/IMG-9310-2.jpg"/>
                         
                         <a href="https://www.linkedin.com/in/siobahnschuck/" target="_blank"><img className="linkedIn" src="https://i.ibb.co/m8BwLfS/linkedin-Icon.png"/> </a>
-                        <h3 className="email">siobahnschuck@gmail.com </h3>
+                        <h3 className="email-abt">siobahnschuck@gmail.com </h3>
                     </div>
                     <div className="graphic-abt" >
                   <img className="bliss-abt" src={graphic} alt="home-Page-Graphic" border="0"/>
