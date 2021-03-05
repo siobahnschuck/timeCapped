@@ -20,23 +20,28 @@
   /* align-self: center;
   justify-self: flex-end; */
 }
-
-.about-nav {
+.logo {
+  align-self: center;
+}
+.about-nav,
+.capsule-nav,
+.home-nav {
+  align-self: center;
   background-color: #86bbd8d3;
+  color: black;
   border-radius: 1px;
-  height: 5vh;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+  border-right: 40px outset orange;
+  border-radius: 40px;
+  -webkit-box-shadow: 1px 5px 8px 1px #000000;
+  box-shadow: 1px 5px 8px 1px #000000;
 }
 
-.capsule-nav {
-  background-color: #86bbd8d3;
-  border-radius: 1px;
-  height: 5vh;
-  width: 20vw;
-}
-
-.stats-nav {
-  background-color: #86bbd8d3;
-  border-radius: 1px;
-  margin-right: 40%;
-  height: 5vh;
+.about-nav:hover,
+.capsule-nav:hover,
+.home-nav:hover {
+  -webkit-box-shadow: 1px 5px 8px 1px orange;
+  box-shadow: 1px 5px 8px 1px orange;
 }

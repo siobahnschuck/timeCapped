@@ -16,6 +16,11 @@ export default class Header extends Component {
                 </NavLink>
                 </div >
                 <div className="navContainer">
+                <NavLink to="/"
+                className="home-nav"
+                style={{ textDecoration: 'none', color: 'black' }}>
+                HOME
+                </NavLink>
                 <NavLink to="/about" 
                 className="about-nav"
                 style={{ textDecoration: 'none', color: 'black' }}> 
