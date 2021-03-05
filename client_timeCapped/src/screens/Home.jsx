@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from '../components/Footer'
 import Header from '../components/Header'
 import graphic from '../styles/img/homePageGraphic.png'
 import {NavLink} from 'react-router-dom'
@@ -22,8 +21,7 @@ export default class Home extends Component{
                   <NavLink to="/capsule" className="cap-txt">Enter the capsule</NavLink>
                   <div className="graphic" >
                   <img className="bliss" src={graphic} alt="home-Page-Graphic" border="0"/>
-                  </div>
-                  
+                  </div> 
                 </main>
             </div>
         )
