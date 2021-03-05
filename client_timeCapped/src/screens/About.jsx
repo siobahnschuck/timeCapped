@@ -17,7 +17,7 @@ export default class About extends Component{
                     <br/>
                     <br/>
                     <h4 className="about-content"> 
-                    Fostered from a deep love of the Voager Golden Record and archival practices. Time capped aims to be a platform of an internet expierement and a way to instantly ignite nostalgia. If you are interested in the open source code, head over to <a href="https://github.com/siobahnschuck/timeCapped" target="_blank">GitHub</a> 
+                    Fostered from a deep love of the Voager Golden Record and archival practices. Time capped aims to be a platform of an internet expierement and a way to instantly ignite nostalgia. If you are interested in the open source code, head over to <a href="https://github.com/siobahnschuck/timeCapped" target="_blank" rel="noreferrer">GitHub</a> 
                     <br/>
                     If you would like to collaborate, expand, or take the capsule a step further feel free to reach out!
                     <br/>
