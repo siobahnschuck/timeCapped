@@ -23,7 +23,7 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get(`${BASE_URL}/content/allc`, axiosConfig)
+    const res = await axios.get(`${BASE_URL}/content/allc`)
     this.setState({
       capsule: res.data
     })
