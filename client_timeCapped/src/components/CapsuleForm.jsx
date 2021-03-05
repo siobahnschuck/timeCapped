@@ -53,15 +53,15 @@ export default class CapsuleForm extends Component {
                         value="submit"/>
                          <button type="button" className="user-btn" onClick={this.handleClick}>next</button>
                 </form>
-            : <Submission 
-            mediaChosen={this.state.mediaChosen} 
-            handleSubmitText={this.props.handleSubmitText} 
-            handleSubmitLink={this.props.handleSubmitLink}
-            handleSubmitImage={this.props.handleSubmitImage} 
-            newSub={this.props.newSub} 
-            handleSubChange={this.props.handleSubChange} 
-            handleClick={this.handleClick}
-            /> }    
+                : <Submission 
+                mediaChosen={this.state.mediaChosen} 
+                handleSubmitText={this.props.handleSubmitText} 
+                handleSubmitLink={this.props.handleSubmitLink}
+                handleSubmitImage={this.props.handleSubmitImage} 
+                newSub={this.props.newSub} 
+                handleSubChange={this.props.handleSubChange} 
+                handleClick={this.handleClick}
+                /> }    
             </div>
         )
     }
