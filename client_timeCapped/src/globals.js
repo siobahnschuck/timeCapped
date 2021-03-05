@@ -1,6 +1,4 @@
-export const axiosConfig = {
-    headers: { Authorization: `Bearer ${process.env.REACT_APP_TIME_CAPPED}` }
-  }
-  
-export const BASE_URL = 'http://localhost:3002'
-  
+export const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? `${window.location.origin}`
+    : 'http://localhost:3001'

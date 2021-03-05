@@ -7,10 +7,10 @@ const LinkRouter = require('./routes/LinkRoute')
 const MediaRouter = require('./routes/MediaRoute')
 const TextRouter = require('./routes/TextRoute')
 const UserRouter = require('./routes/UserRoutes')
+const path = require('path')
 
-// require('dotenv').config()
 const app = express()
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3001
 
 //middleware
 app.use(bodyParser.json())
@@ -25,4 +25,12 @@ app.use('/content', TextRouter)
 app.use('/content', LinkRouter)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')))
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/client/build/index.html`))
+  })
+}
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}⏰ `))
