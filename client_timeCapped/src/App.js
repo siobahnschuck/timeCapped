@@ -62,7 +62,6 @@ export default class App extends Component {
         locations: this.state.locations,
         email: this.state.email
       })
-      console.log(res.data)
       return res.data
     } catch (error) {
       console.log(error)
@@ -121,7 +120,6 @@ export default class App extends Component {
       )
       this.setState({ deleted: true, newSub: '', submitted: false })
       this.componentDidMount()
-      console.log(res)
     } catch (error) {
       console.log(error)
     }
@@ -132,8 +130,8 @@ export default class App extends Component {
       let res = await axios.delete(
         `${BASE_URL}/content/text/delete/${this.state.capsule._id}`
       )
-      console.log(res)
       this.setState({ deleted: true, newSub: '', submitted: false })
+      this.componentDidMount()
     } catch (error) {
       console.log(error)
     }
@@ -144,8 +142,8 @@ export default class App extends Component {
       let res = await axios.delete(
         `${BASE_URL}/content/link/delete/${this.state.capsule._id}`
       )
-      console.log(res)
       this.setState({ deleted: true, newSub: '', submitted: false })
+      this.componentDidMount()
     } catch (error) {
       console.log(error)
     }
@@ -159,7 +157,6 @@ export default class App extends Component {
   capsuleStats = async (e) => {
     try {
       let res = await axios.get(`${BASE_URL}/content/all/types`)
-      console.log(res.data)
       this.setState({ stats: res.data })
     } catch (error) {
       console.log(error)

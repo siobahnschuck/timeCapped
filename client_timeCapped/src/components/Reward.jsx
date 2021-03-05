@@ -16,7 +16,6 @@ export default class Reward extends Component {
                     let value = capsule[key]
                     switch (key) {
                       case 'img':
-                        console.log(value)
                         return (<div className="imgReward"> <div> <img src={value} alt="poster" style={{height: 350, width: 350}} /> </div>
                           <div className="social">
                             <FacebookShareButton className="social-btn" url="http://localhost:3000/capsule" quote={"Look what I got out of the capsule!"}
@@ -30,7 +29,6 @@ export default class Reward extends Component {
                             </div> 
                           </div>)
                       case 'url':
-                        console.log(value)
                         return (
                         <div className="linkReward"> <div><a href={value} target="_blank" rel="noreferrer" style={{fontSize: 50}}> {value} </a></div>
                           <div className="social">
@@ -45,7 +43,6 @@ export default class Reward extends Component {
                           </div>
                         </div>)
                       case 'text':
-                        console.log(value) 
                         return (
                         <div className="text-reward"><p style={{fontSize: 20}}> {value} </p>
                           <div className="social">

@@ -13,8 +13,6 @@ export default class CapsuleForm extends Component {
     }
 
     handleClick = (e) => {
-        console.log('click')
-        console.log(e.target.value)
         this.setState({
             mediaChosen: e.target.value, 
             clicked: true

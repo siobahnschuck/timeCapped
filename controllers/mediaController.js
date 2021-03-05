@@ -38,7 +38,6 @@ const deleteMedia = async (req, res) => {
 const getRandom = async (req, res) => {
   try {
     let media = await Media.count()
-    console.log(media)
     let text = await Text.count()
     let link = await Link.count()
     let randomMedia = await Media.findOne()
@@ -53,7 +52,7 @@ const getRandom = async (req, res) => {
     let results = [randomMedia, randomLink, randomText]
     res.send(results[Math.floor(Math.random() * results.length)])
   } catch (error) {
-    console.log(error)
+    res.status(500).json({ msg: error.message })
   }
 }
 
@@ -66,7 +65,7 @@ const getAll = async (req, res) => {
     let results = [media, text, link, user]
     res.send(results)
   } catch (error) {
-    console.log(error)
+    res.status(500).json({ msg: error.message })
   }
 }
 
