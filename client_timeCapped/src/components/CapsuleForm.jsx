@@ -26,7 +26,7 @@ export default class CapsuleForm extends Component {
             {(!this.state.clicked) ?
                 <form  className="container-form"onSubmit={this.props.handleSubmit}>
                     <input
-                        className="user-form"
+                        className="date"
                         type="text"
                         name="date"
                         placeholder="date"
@@ -34,24 +34,24 @@ export default class CapsuleForm extends Component {
                         onChange={this.props.handleDate} />
 
                     <input
-                        className="user-form"
+                        className="loca"
                         type="text"
                         name="location"
                         value={this.props.locations}
                         placeholder="where are you?"
                         onChange={this.props.handleLocation} />
                     <input
-                        className="user-form"
+                        className="email"
                         type="text"
                         name="email"
                         placeholder="email"
                         value={this.props.email}
                         onChange={this.props.handleEmail} />
                     < input
-                    className="submit-btn"
+                    className="user-btn"
                         type="submit"
                         value="submit"/>
-                         <button type="button" className="submit-btn" onClick={this.handleClick}>next</button>
+                         <button type="button" className="user-btn" onClick={this.handleClick}>next>></button>
                 </form>
             : <Submission 
             mediaChosen={this.state.mediaChosen} 
