@@ -25,7 +25,8 @@
 
 .type-btn {
   border: none;
-  margin: 2em;
+  margin: 20px;
+  margin-left: 50px;
   width: 10vw;
   background-color: orange;
   color: white;
@@ -36,13 +37,18 @@
   display: grid;
   grid-template-rows: 50% 30vh;
   grid-template-columns: auto;
+  width: 50vw;
   justify-items: center;
   align-items: center;
+  justify-content: space-around;
 }
 .text-reward {
   height: 100%;
   width: 100%;
-  background-color: darkgoldenrod;
+  background-color: #86bbd8;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 50px;
 }
 
 .imgReward {
@@ -52,6 +58,8 @@
 .social {
   display: flex;
   grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
 }
 
 .delete,
