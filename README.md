@@ -30,9 +30,9 @@ Media currently accepted:
 ### **_Technologies_**
 
 ![jsHtmlCss](./imgs/big3.png)
-![nodeJS](./imgs/react.png)
-![nodeJS](./imgs/express.png)
-![nodeJS](./imgs/mongo.png)
+![react](./imgs/react.png)
+![express](./imgs/expressjs.png)
+![mongo](./imgs/mongodb.png)
 
 ---
 
