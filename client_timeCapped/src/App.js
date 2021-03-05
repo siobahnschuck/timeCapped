@@ -103,7 +103,7 @@ export default class App extends Component {
     e.preventDefault()
     try {
       let res = await axios.post(`${BASE_URL}/content/media/add`, {
-        url: this.state.newSub
+        img: this.state.newSub
       })
       this.setState({
         submitted: true
