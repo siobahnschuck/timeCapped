@@ -42,7 +42,7 @@ To view my Trello board click [here](https://trello.com/b/3IIwgRCc/timecapped)
 
 ### Installation Instructions
 
-Otherwise to view and participate in the time capsule click [this link]() to visit my website.
+Otherwise to view and participate in the time capsule click [this link](https://enigmatic-ocean-53010.herokuapp.com/) to visit my website.
 
 ---
 
